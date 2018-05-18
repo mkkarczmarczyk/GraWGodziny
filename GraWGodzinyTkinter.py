@@ -55,35 +55,10 @@ def callback():
         tkMessageBox.showerror("Info", "Jeszcze raz" )
 
 
-#scrollbar1 = Scrollbar(master)
-#scrollbar1.pack(side=RIGHT, fill=Y)
+
 
 textFrame = Frame(master)
 
-
-
-##for item in ["one", "two", "three", "four"]:
-    ##listbox.insert(END, str(i))
-
-
-
-
-##scrollbar1.config(command=listbox1.yview)
-
-##scrollbar2 = Scrollbar(master)
-##scrollbar2.pack(side=RIGHT, fill=Y)
-
-#listbox2 = Listbox(master)
-
-#for item in ["one", "two", "three", "four"]:
-    #listbox2.insert(END, item)
-
-##for key in minuty:
-    ##listbox2.insert(END, key)
-
-#listbox2.pack(side=RIGHT, fill=BOTH)
-
-#scrollbar2.config(command=listbox2.yview)
 
 L1 = Label(textFrame, text="Godzina")
 L1.pack(side = LEFT)
@@ -96,7 +71,7 @@ E1 = Listbox(textFrame,exportselection=0,height=5,width=5,yscrollcommand=scrollb
 
 for key in godziny:
     E1.insert(END, key)
-#E1 = Entry(textFrame, bd =5)
+
 
 E1.pack(side = LEFT,fill=Y)
 scrollbar1.pack(side=LEFT, fill=Y)
@@ -107,11 +82,6 @@ L2 = Label(textFrame, text="Minut")
 L2.pack( side = LEFT,fill=None)
 
 scrollbar2 = Scrollbar(textFrame)
-
-
-
-
-#E2 = Entry(textFrame, bd =5)
 E2 = Listbox(textFrame,exportselection=0,height=5,width=5,yscrollcommand=scrollbar2.set)
 for key in minuty:
     E2.insert(END, key)
